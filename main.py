@@ -172,7 +172,7 @@ selected_sort = st.sidebar.selectbox(
         "Data 1º Leilão, Decrescente",
         "Data de Criação, Crescente",
         "Data de Criação, Decrescente"
-    ]
+    ], index=3
 )
 selected_status = st.sidebar.selectbox("Status do Leilão", ["", "HASTA2_REPORTADA", "HASTA3_REPORTADA", "SUSPENSO", "CANCELADO", "ENCERRADO", "AGENDADO", "HASTA1_NAO_REALIZADA", "ANALISAR_SUSPENSAO_CANCELAMENTO"])
 data_inicio = st.sidebar.date_input("Data de início", format="DD/MM/YYYY", value=None)
