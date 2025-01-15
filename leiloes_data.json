@@ -23182,62 +23182,6 @@
             "valorTotalBens": 12070000.0
         },
         {
-            "id": 113,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-08-02T12:40:00",
-            "segundaHasta": "2024-08-05T12:40:00",
-            "processo": {
-                "id": 111,
-                "numeroProcesso": "07025134020198070008",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "MARIA VERA LUCIA FERREIRA DO NASCIMENTO",
-                "poloPassivo": "MANOEL MESSIAS RODRIGUES AMANCIO",
-                "dataCriacao": "2024-08-01T14:41:50.31884",
-                "dataAlteracao": "2024-09-05T17:44:24.416265",
-                "numeroProcessoFormatado": "0702513-40.2019.8.07.0008",
-                "orgaoJulgador": {
-                    "id": 39,
-                    "idNoPje": "170",
-                    "nome": "Vara Cível do Paranoá",
-                    "codigoRh": "11901010000"
-                }
-            },
-            "leiloeiro": {
-                "id": 14,
-                "nome": "MOACIRA TEGONI GOEDERT",
-                "localRealizacao": "www.moacira.lel.br",
-                "numeroJuntaComercial": "63",
-                "ativo": true,
-                "telefoneComercial": "(61) 3041-9533",
-                "enderecoComercial": "SBS Quadra 2, 2, Asa Sul, BRASÍLIA, DF. Complemento: Bloco E, Ed. Prime, sala 206. CEP: 70070-120."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 151,
-                    "descricao": "Direitos possessórios do Imóvel localizado no Conjunto Residencial 102, Lote 14, Vale do Amanhecer Planaltina-DF, o imóvel consiste em lote de cerca de 110m2, sem edificações. Consulte os termos do edital. Avaliação",
-                    "valor": 42000.0
-                }
-            ],
-            "deleted": false,
-            "status": "CANCELADO",
-            "justificativaCancelamentoSuspensao": "erro no agendamento",
-            "idJustificativaCancelamento": "000",
-            "dataDaModificacaoDoStatus": "2024-08-01T19:00:34.517346",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carla Edilara Araújo",
-            "acaoEsperada": "---",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-08-01T15:14:10.47632",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 42000.0
-        },
-        {
             "id": 150,
             "tipoDeLeilao": "ELETRONICO",
             "tipoDeBemALeiloar": "IMOVEL",
