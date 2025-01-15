@@ -6,6 +6,15 @@ import os
 import json
 import time
 from datetime import datetime
+from trycourier import Courier
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente
+load_dotenv()
+
+# Obter variáveis de ambiente
+COURIER_API_TOKEN = os.getenv('COURIER_API_TOKEN')
+EMAIL_DESTINATARIOS = os.getenv('EMAIL_DESTINATARIOS').split(',')
 
 # -------------------- Configurações Iniciais --------------------
 API_URL = "https://leilojus-api.tjdft.jus.br/public/leiloes"
@@ -61,10 +70,6 @@ def format_date(date_str):
     return ""
 
 def compare_dicts(dict1, dict2, ignore_fields=None):
-    """
-    Compara dois dicionários de forma recursiva e retorna um dicionário com os campos alterados,
-    incluindo o campo, o valor anterior e o novo valor. Ignora os campos listados em ignore_fields.
-    """
     if ignore_fields is None:
         ignore_fields = []
         
@@ -101,7 +106,6 @@ def compare_dicts(dict1, dict2, ignore_fields=None):
     return changes
 
 def check_for_changes(existing, new, ignore_fields=None):
-    """Compara os imóveis existentes com os novos para verificar mudanças e retorna os objetos atualizados."""
     changes = []
     
     for existing_item in existing:
@@ -130,6 +134,112 @@ def check_for_changes(existing, new, ignore_fields=None):
                 changes.append(updated_item)
     
     return changes
+
+def buscarDados():
+    st.info("Buscando novos leilões, por favor aguarde...")
+    
+    # Reinicia os dados para buscar toda a base
+    new_data = []
+    all_leiloes = []
+    page = 0
+
+    while True:
+        leiloes_data = fetch_leiloes(page, additional_params={"status": selected_status})
+        if not leiloes_data:
+            break
+
+        all_leiloes.extend(leiloes_data)        
+        page += 1
+
+    # Filtra os novos leilões que não estão na lista existente
+    existing_data_ids = {leilao['id'] for leilao in lotes}
+    new_data = [leilao for leilao in all_leiloes if leilao['id'] not in existing_data_ids]
+
+    # Verifica mudanças nos imóveis existentes
+    ignore_fields = ["data_atualizacao_api", "historico_alteracoes"] 
+    changes = check_for_changes(lotes, all_leiloes,ignore_fields)
+    
+    save_to_json(changes, "mudancas.json")
+    
+    # Atualiza apenas os leilões modificados
+    for leilao in changes:
+        index_to_update = next((i for i, item in enumerate(lotes) if item['id'] == leilao['id']), None)
+        if index_to_update is not None:
+            lotes[index_to_update] = leilao  # Substitui o leilão modificado pela versão nova
+
+    # Atualiza a base de dados com novos e atualizados leilões
+    lotes.extend(new_data)
+
+    # Salva os dados atualizados
+    save_to_json(lotes, JSON_FILE)
+
+    return new_data, changes
+
+
+def formatar_novos_imoveis_email(json_data):
+    formatted_string = ""
+    
+    for imovel in json_data:
+        leiloeiro = imovel.get("leiloeiro", {})
+        processo = imovel.get("processo", {})
+        bens = imovel.get("bensALeiloar", [])
+        
+        formatted_string += (
+            f"\nID do Leilão: {imovel.get('id')}\n"
+            f"Tipo de Leilão: {imovel.get('tipoDeLeilao')}\n"
+            f"Primeira Hasta: {imovel.get('primeiraHasta')}\n"
+            f"Segunda Hasta: {imovel.get('segundaHasta')}\n"
+            f"Status: {imovel.get('status')}\n"
+            f"Justificativa (se houver): {imovel.get('justificativaCancelamentoSuspensao', 'N/A')}\n"
+            f"Valor Total dos Bens: R$ {imovel.get('valorTotalBens', 0):,.2f}\n"
+            f"----- PROCESSO -----\n"
+            f"Número do Processo: {processo.get('numeroProcessoFormatado')}\n"
+            f"Polo Ativo: {processo.get('poloAtivo')}\n"
+            f"Polo Passivo: {processo.get('poloPassivo')}\n"
+            f"Órgão Julgador: {processo.get('orgaoJulgador', {}).get('nome', 'N/A')}\n"
+            f"--- LEILOEIRO ---\n"
+            f"Site: {leiloeiro.get('localRealizacao')}\n"
+        )
+        
+        formatted_string += "----- BENS A LEILOAR -----\n"
+        for bem in bens:
+            formatted_string += (
+                f"Descrição: {bem.get('descricao', 'N/A')}\n"
+                f"Valor: R$ {bem.get('valor', 0):,.2f}\n"
+                "-----------------------\n"
+            )
+        
+        formatted_string += "\n" + ("=" * 40) + "\n\n"
+
+    return formatted_string
+
+def send_email(subject, body):
+    try:
+        # Configurar Courier
+        client = Courier(auth_token=COURIER_API_TOKEN)
+        
+         # Cria a lista de destinatários
+        to_list = [{"email": email.strip()} for email in EMAIL_DESTINATARIOS if email.strip()]
+
+        if not to_list:
+            print("Nenhum destinatário válido encontrado.")
+            return
+        response = client.send_message(
+            message={
+                "to": to_list,
+                "content": {
+                    "title": subject,
+                    "body": body,
+                }
+            }
+        )
+        
+        print(response)
+
+    except Exception as e:
+        print(e)
+        # Imprimir o erro em caso de exceção
+        print(f"Erro ao enviar e-mail: {str(e)}")
 
 # -------------------- Layout da Aplicação --------------------
 st.title("Leilojus - Busca de Leilões")
@@ -247,46 +357,22 @@ st.subheader(f"Leilões Encontrados: {total_items}")
 
 # -------------------- Atualizar Dados --------------------
 if st.sidebar.button("Buscar Novos Leilões"):
-    st.info("Buscando novos leilões, por favor aguarde...")
-    
-    # Reinicia os dados para buscar toda a base
-    new_data = []
-    all_leiloes = []
-    page = 0
-
-    while True:
-        leiloes_data = fetch_leiloes(page, additional_params={"status": selected_status})
-        if not leiloes_data:
-            break
-
-        all_leiloes.extend(leiloes_data)        
-        page += 1
-
-    # Filtra os novos leilões que não estão na lista existente
-    existing_data_ids = {leilao['id'] for leilao in lotes}
-    new_data = [leilao for leilao in all_leiloes if leilao['id'] not in existing_data_ids]
-
-    # Verifica mudanças nos imóveis existentes
-    ignore_fields = ["data_atualizacao_api", "historico_alteracoes"] 
-    changes = check_for_changes(lotes, all_leiloes,ignore_fields)
-    
-    save_to_json(changes, "mudancas.json")
-    
-    # Atualiza apenas os leilões modificados
-    for leilao in changes:
-        index_to_update = next((i for i, item in enumerate(lotes) if item['id'] == leilao['id']), None)
-        if index_to_update is not None:
-            lotes[index_to_update] = leilao  # Substitui o leilão modificado pela versão nova
-
-    # Atualiza a base de dados com novos e atualizados leilões
-    lotes.extend(new_data)
-
-    # Salva os dados atualizados
-    save_to_json(lotes, JSON_FILE)
-
+    new_data, changes = buscarDados()
     st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
-    time.sleep(2)
+    time.sleep(3)
     st.rerun()
+
+if st.query_params.get("buscar") == "true":
+    new_data, changes = buscarDados()
+    st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
+    
+    if(new_data or changes):
+        alert_subject = 'Leilões Judiciais DF - Novos Imóveis Adicionados!'
+        alert_body = f'Foram adicionados {len(new_data)} novos imóveis e {len(changes)} atualizados. Verifique a lista para mais detalhes:\n\n'
+        alert_body += '\n\n--- Novos Imóveis ---\n\n'
+        alert_body += formatar_novos_imoveis_email(new_data)
+        alert_body += '\n\nConfira em: https://leiloesjusdf.streamlit.app/\n\n'
+        send_email(alert_subject, alert_body)
 
 # -------------------- Exibição de Resultados --------------------
 if page_data:
