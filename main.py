@@ -8,6 +8,9 @@ import time
 from datetime import datetime
 from trycourier import Courier
 from dotenv import load_dotenv
+import pytz
+
+fuso_horario_brasil = pytz.timezone('America/Sao_Paulo')
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -44,7 +47,7 @@ def fetch_leiloes(page=0, additional_params=None):
 def save_to_json(data, filename):
     """Salva dados em arquivo JSON, incluindo informações gerais."""
     dados_gerais = {
-        "data_atualizacao": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        "data_atualizacao": datetime.now(fuso_horario_brasil).strftime('%Y-%m-%d %H:%M:%S')
     }
     
     # Adiciona a seção de dados gerais e os lotes
@@ -126,7 +129,7 @@ def check_for_changes(existing, new, ignore_fields=None):
 
                 # Adiciona as mudanças no histórico (sem criar um novo nível)
                 updated_item['historico_alteracoes'].append({
-                    'dataAlteracao': datetime.now().isoformat(),
+                    'dataAlteracao': datetime.now(fuso_horario_brasil).isoformat(),
                     'alteracoes': item_changes
                 })
                 
