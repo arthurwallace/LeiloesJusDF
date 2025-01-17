@@ -220,6 +220,16 @@ def buscarDados():
 
     if(new_data):
         lotes_collection.insert_many(new_data)
+        
+    dados_gerais = {
+        "data_atualizacao": datetime.now(fuso_horario_brasil).strftime('%Y-%m-%d %H:%M:%S')
+    }
+    
+    dados_gerais_collection.update_one(
+        {"_id": "dados_gerais"}, 
+        {"$set": dados_gerais}, 
+        upsert=True
+    )
 
     return new_data, changes
 
