@@ -28,6 +28,10 @@ client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
 db = client["leiloes_judiciais"]
 dados_gerais_collection = db["dados_gerais"]
 lotes_collection = db["lotes"]
+print("Tentanto configaurar")
+print(client)
+
+print(dados_gerais_collection.find_one())  
 
 # -------------------- Configurações Iniciais --------------------
 API_URL = "https://leilojus-api.tjdft.jus.br/public/leiloes"
@@ -301,7 +305,9 @@ st.set_page_config(
 st.title("Leilojus - Busca de Leilões")
 
 # -------------------- Carregamento de Dados --------------------
-if not os.path.exists(JSON_FILE):
+existing_data = load_from_mongo()
+
+if not existing_data:
     st.info("Carregando dados iniciais, por favor aguarde...")
 
     all_leiloes = []
@@ -317,14 +323,14 @@ if not os.path.exists(JSON_FILE):
 
     if all_leiloes:
         all_leiloes = {"lotes": all_leiloes}  # Estrutura de lotes
-        save_to_json(all_leiloes, JSON_FILE)
+        # save_to_json(all_leiloes, JSON_FILE)
         save_to_mongo(all_leiloes['lotes'])
         st.success(f"Dados iniciais carregados com {len(all_leiloes['lotes'])} registros.")
     else:
         st.warning("Nenhum dado inicial encontrado.")
 
 # existing_data = load_from_json(JSON_FILE)
-existing_data = load_from_mongo()
+
 
 dados_gerais = existing_data['dados_gerais']
 lotes = existing_data['lotes']
