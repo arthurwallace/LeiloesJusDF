@@ -423,13 +423,19 @@ st.subheader(f"Leilões Encontrados: {total_items}")
 # -------------------- Atualizar Dados --------------------
 if st.sidebar.button("Buscar Novos Leilões"):
     new_data, changes = buscarDados()
-    st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
+    if(new_data or changes):
+        st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
+    else:
+        st.info("Nenhum novo leilão ou atualização encontrados.")
     time.sleep(3)
     st.rerun()
 
 if st.query_params.get("buscar") == "true":
     new_data, changes = buscarDados()
-    st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
+    if(new_data or changes):
+        st.success(f"{len(new_data)} novos leilões e {len(changes)} leilões atualizados encontrados!")
+    else:
+        st.info("Nenhum novo leilão ou atualização encontrados.")
     
     if(new_data or changes):
         alert_subject = 'Leilões Judiciais DF - Novos Imóveis Adicionados!'
