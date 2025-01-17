@@ -33,7 +33,7 @@ lotes_collection = db["lotes"]
 API_URL = "https://leilojus-api.tjdft.jus.br/public/leiloes"
 DEFAULT_PARAMS = {
     "tiposDeBemALeiloar": "IMOVEL",
-    "size": 500,  # Página inicial com 10 itens por página
+    "size": 1000,  # Página inicial com 10 itens por página
     "sort": "primeiraHasta,asc",
 }
 JSON_FILE = "leiloes_data.json"
