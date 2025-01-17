@@ -28,10 +28,6 @@ client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
 db = client["leiloes_judiciais"]
 dados_gerais_collection = db["dados_gerais"]
 lotes_collection = db["lotes"]
-print("Tentanto configaurar")
-print(client)
-
-print(dados_gerais_collection.find_one())  
 
 # -------------------- Configurações Iniciais --------------------
 API_URL = "https://leilojus-api.tjdft.jus.br/public/leiloes"
@@ -216,22 +212,13 @@ def buscarDados():
     
     # Atualiza apenas os leilões modificados
     for leilao in changes:
-        print("atualizando item: ", leilao["id"])
         lotes_collection.update_one(
             {"id": leilao["id"]}, 
             {"$set": leilao}, 
             upsert=True
         )
 
-    # Atualiza a base de dados com novos e atualizados leilões
-    #adicionar os novos dados ao banco de dados
-    print(f"Adicionando {len(new_data)} novos leilões ao banco de dados...")
     lotes_collection.insert_many(new_data)
-    # lotes.extend(new_data)
-    
-
-
-    # save_to_mongo(lotes)
 
     return new_data, changes
 
