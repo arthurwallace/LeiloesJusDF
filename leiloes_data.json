@@ -1,8 +1,950 @@
 {
     "dados_gerais": {
-        "data_atualizacao": "2025-01-15 17:09:50"
+        "data_atualizacao": "2025-01-17 16:19:15"
     },
     "lotes": [
+        {
+            "id": 460,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-02-03T13:30:00",
+            "segundaHasta": "2025-02-06T13:30:00",
+            "processo": {
+                "id": 428,
+                "numeroProcesso": "07013131820218070011",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "CONDOMINIO DA PROJECAO Y E Z DA AREA ESPECIAL 07",
+                "poloPassivo": "DELMA SAUDE SOARES",
+                "dataCriacao": "2024-10-31T14:51:49.652831",
+                "dataAlteracao": "2025-01-17T11:52:16.13351",
+                "numeroProcessoFormatado": "0701313-18.2021.8.07.0011",
+                "orgaoJulgador": {
+                    "id": 95,
+                    "idNoPje": "38",
+                    "nome": "Juizado Especial Cível e Criminal do Núcleo Bandeirante",
+                    "codigoRh": "12304010000"
+                }
+            },
+            "leiloeiro": {
+                "id": 13,
+                "nome": "FÁBIO MANOEL GUIMARÃES ",
+                "localRealizacao": "www.fabioleiloes.com.br",
+                "numeroJuntaComercial": "109",
+                "ativo": true,
+                "telefoneComercial": "(21) 96419-7304",
+                "enderecoComercial": "CRS 502 Bloco C, 502, Asa Sul, BRASÍLIA, DF. Complemento: Bloco C, Loja 37, Parte 921. CEP: 70330-530."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 623,
+                    "descricao": "apartamento nº 101, do Edifício Pires do Rio, construído nos Lotes Y e Z, Área Especial nº 07, do Setor Avenida Contorno, do Núcleo Bandeirante, matrícula nº 43696 do 4º Ofício do Registro de Imóveis do Distrito Federal. Consulte os termos do edital. Avaliação ",
+                    "valor": 280000.0
+                }
+            ],
+            "deleted": false,
+            "status": "CANCELADO",
+            "justificativaCancelamentoSuspensao": "Desconstituição de penhora, homologação de acordo.",
+            "idJustificativaCancelamento": " 222665796",
+            "dataDaModificacaoDoStatus": "2025-01-17T11:52:11.833884",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Joyanna Loara do Passo",
+            "acaoEsperada": "---",
+            "encerrado": true,
+            "dataDoAgendamento": "2024-10-31T14:52:54.85689",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 280000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-17T16:00:17.191887-03:00",
+                    "alteracoes": {
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2024-10-31T14:52:54.85689",
+                                "new": "2025-01-17T11:52:16.13351"
+                            }
+                        },
+                        "status": {
+                            "old": "AGENDADO",
+                            "new": "CANCELADO"
+                        },
+                        "dataDaModificacaoDoStatus": {
+                            "old": "2024-10-31T14:52:54.855802",
+                            "new": "2025-01-17T11:52:11.833884"
+                        },
+                        "acaoEsperada": {
+                            "old": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 18/11/2024 14:52",
+                            "new": "---"
+                        },
+                        "encerrado": {
+                            "old": false,
+                            "new": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 463,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-02-04T17:00:00",
+            "segundaHasta": "2025-02-07T17:00:00",
+            "processo": {
+                "id": 431,
+                "numeroProcesso": "07480836520228070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "CONJUNTO RESIDENCIAL 07 (CR-07)",
+                "poloPassivo": "JOSE CELSO GONTIJO ENGENHARIA S/A",
+                "dataCriacao": "2024-11-06T13:53:03.671768",
+                "dataAlteracao": "2024-11-06T13:54:09.126633",
+                "numeroProcessoFormatado": "0748083-65.2022.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 17,
+                    "idNoPje": "127",
+                    "nome": "19ª Vara Cível de Brasília",
+                    "codigoRh": "11201190000"
+                }
+            },
+            "leiloeiro": {
+                "id": 1,
+                "nome": "MARTHA HELENA TOBIAS DA SILVA",
+                "localRealizacao": "www.marthahelenaleiloeira.com.br",
+                "numeroJuntaComercial": "103",
+                "ativo": true,
+                "telefoneComercial": "(61) 9927-2078",
+                "enderecoComercial": "ARNIQUEIRA VEREDAO, LOTE 07 , TAGUATINGA/DF, BRASÍLIA, DF. Complemento: GALPAOZINHO. CEP: 72000-000."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 626,
+                    "descricao": "Imóvel situado no Conjunto Residencial 07 CR 07, Bloco H, Apartamento 808, Valparaíso de Goiás/GO, registrado no Cartório de Registro de Imóveis e Anexos da Comarca de Valparaíso de Goiás/GO, sob a matrícula nº 44.013.",
+                    "valor": 140000.0
+                }
+            ],
+            "deleted": false,
+            "status": "AGENDADO",
+            "dataDaModificacaoDoStatus": "2024-11-06T13:54:09.125625",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 22/11/2024 13:54",
+            "encerrado": false,
+            "dataDoAgendamento": "2024-11-06T13:54:09.126633",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 140000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-15T15:00:12.049203",
+                    "alteracoes": {
+                        "processo": {
+                            "poloPassivo": {
+                                "old": "JOSÉ CELSO GONTIJO ENGENHARIA S/A",
+                                "new": "JOSE CELSO GONTIJO ENGENHARIA S/A"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 311,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-11-04T16:10:00",
+            "segundaHasta": "2024-11-07T16:10:00",
+            "processo": {
+                "id": 297,
+                "numeroProcesso": "07163784920228070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "CONJUNTO RESIDENCIAL 07 (CR-07)",
+                "poloPassivo": "JOSE CELSO GONTIJO ENGENHARIA S/A",
+                "dataCriacao": "2024-09-18T15:42:05.439527",
+                "dataAlteracao": "2024-11-08T09:52:48.372598",
+                "numeroProcessoFormatado": "0716378-49.2022.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 29,
+                    "idNoPje": "126",
+                    "nome": "10ª Vara Cível de Brasília",
+                    "codigoRh": "11201100000"
+                }
+            },
+            "leiloeiro": {
+                "id": 30,
+                "nome": "FERNANDO GONÇALVES COSTA",
+                "localRealizacao": "www.multleiloes.com",
+                "numeroJuntaComercial": "10",
+                "ativo": true,
+                "telefoneComercial": "(61) 3465-2074",
+                "enderecoComercial": "SOFN Quadra 1 Conjunto A, 8, Zona Industrial, BRASÍLIA, DF. Complemento: MULTLEILOES.COM. CEP: 70634-110."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 437,
+                    "descricao": "Imóvel situado no Conjunto Residencial 07 CR 07, Bloco C, Apartamento 101, Parque das Cachoeiras, Valparaíso de Goiás/GO, inscrito no Registro de Imóveis da Comarca de Valparaíso de Goiás/GO, sob a matrícula n. 2518, com área privativa de 48,31 m2, composto de dois quartos, circulação, banheiro social, sala, cozinha conjugada com área de serviço e Vaga de Garagem n. 768.",
+                    "valor": 160000.0
+                }
+            ],
+            "deleted": false,
+            "status": "ENCERRADO",
+            "dataDaModificacaoDoStatus": "2024-11-08T09:52:48.364838",
+            "arrematacaoGlobal": true,
+            "valorArrematacaoGlobal": 107000,
+            "statusDaVenda": "VENDIDO",
+            "hastaDaVenda": "SEGUNDA_HASTA",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "---",
+            "encerrado": true,
+            "dataDoAgendamento": "2024-09-18T15:43:16.302218",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 160000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-15T15:00:12.044202",
+                    "alteracoes": {
+                        "processo": {
+                            "poloPassivo": {
+                                "old": "JOSÉ CELSO GONTIJO ENGENHARIA S/A",
+                                "new": "JOSE CELSO GONTIJO ENGENHARIA S/A"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 97,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-08-06T16:10:00",
+            "segundaHasta": "2024-08-09T16:10:00",
+            "processo": {
+                "id": 95,
+                "numeroProcesso": "01800021520088070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "M.P.D.D.F.E.T",
+                "poloPassivo": "A.P.E.L",
+                "dataCriacao": "2024-07-31T16:36:07.740525",
+                "dataAlteracao": "2024-08-12T12:33:22.148691",
+                "numeroProcessoFormatado": "0180002-15.2008.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 46,
+                    "idNoPje": "251",
+                    "nome": "5ª Vara Criminal de Brasília",
+                    "codigoRh": "11202050000"
+                }
+            },
+            "leiloeiro": {
+                "id": 27,
+                "nome": "JOSÉ LUIZ PEREIRA VIZEU",
+                "localRealizacao": "https://www.flexleiloes.com.br/home/",
+                "numeroJuntaComercial": "37",
+                "ativo": true,
+                "telefoneComercial": "(61) 4063-8301",
+                "enderecoComercial": "STRC Trecho 2 Conjunto B, 02/03, Zona Industrial (Guará), BRASÍLIA, DF. CEP: 71225-522."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 131,
+                    "descricao": "Alienação antecipada com base no artigo 144-A do CPP - Item 1: Imóvel de matrícula n. 246378, do 3º CRI/DF, denominado Quiosque n. 03, com área de 9 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF,  ",
+                    "valor": 75000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                },
+                {
+                    "id": 132,
+                    "descricao": "Item 2: Imóvel de matrícula n. 246379, do 3º CRI/DF, denominado Quiosque n. 04, com área de 9 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF ",
+                    "valor": 75000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                },
+                {
+                    "id": 133,
+                    "descricao": "Item 3: Imóvel de matrícula n. 246421, do 3º CRI/DF, denominado Quiosque n. 05, com área de 46,5 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF",
+                    "valor": 170000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                },
+                {
+                    "id": 134,
+                    "descricao": "Item 4 Imóvel de matrícula n. 246353, do 3º CRI/DF, denominado Loja n. 10, com área de 59 m2, situado na Rua das Paineiras, Lote 06, Aguas Claras/DF,",
+                    "valor": 380000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                },
+                {
+                    "id": 135,
+                    "descricao": " Item 5: Imóvel de matrícula n. 246380, do 3º CRI/DF, denominado Loja n. 33, com área de 33,10 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF",
+                    "valor": 220000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                }
+            ],
+            "deleted": false,
+            "status": "HASTA2_REPORTADA",
+            "dataDaModificacaoDoStatus": "2024-08-12T12:33:22.144226",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carla Edilara Araújo",
+            "acaoEsperada": "---",
+            "encerrado": false,
+            "dataDoAgendamento": "2024-07-31T16:43:56.292348",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "hastaAtual": "SEGUNDA_HASTA",
+            "ultimaHastaReportada": true,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 920000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-15T15:00:12.041213",
+                    "alteracoes": {
+                        "processo": {
+                            "poloAtivo": {
+                                "old": "M.P.D.U",
+                                "new": "M.P.D.D.F.E.T"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 114,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-08-06T14:20:00",
+            "segundaHasta": "2024-08-09T14:20:00",
+            "processo": {
+                "id": 112,
+                "numeroProcesso": "00066561320148070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "BRB BANCO DE BRASILIA SA",
+                "poloPassivo": "RAQUEL RIZZA VIEIRA MESQUITA",
+                "dataCriacao": "2024-08-01T15:16:09.022899",
+                "dataAlteracao": "2025-01-14T16:39:44.699618",
+                "numeroProcessoFormatado": "0006656-13.2014.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 3,
+                    "idNoPje": "95",
+                    "nome": "2ª Vara de Execução de Títulos Extrajudiciais e Conflitos Arbitrais de Brasília",
+                    "codigoRh": "11209420000"
+                }
+            },
+            "leiloeiro": {
+                "id": 8,
+                "nome": "MOUZAR BASTON FILHO",
+                "localRealizacao": "https://www.bastonleiloes.com.br/",
+                "numeroJuntaComercial": "115",
+                "ativo": true,
+                "telefoneComercial": "(16) 99200-0339",
+                "enderecoComercial": "SRTVS Conjunto L Lote 38, 38, Asa Sul, BRASÍLIA, DF. Complemento: SALA 717. CEP: 70340-906."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 152,
+                    "descricao": "Imóvel rural, denominado FAZENDA JACARUTU, localizada no município de Padre Bernardo/GO, sob a matricula n? 10.937 do Registro de Imóveis de Padre Bernardo/GO. Consulte os termos do edital. Avaliação",
+                    "valor": 12070000.0,
+                    "statusDaVenda": "NAO_VENDIDO"
+                }
+            ],
+            "deleted": false,
+            "status": "ENCERRADO",
+            "dataDaModificacaoDoStatus": "2025-01-14T16:34:38.198069",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carla Edilara Araújo",
+            "acaoEsperada": "---",
+            "encerrado": true,
+            "dataDoAgendamento": "2024-08-01T15:19:14.4014",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 12070000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T17:02:27.012899",
+                    "alteracoes": {
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2024-08-09T16:24:27.153296",
+                                "new": "2025-01-14T16:39:44.699618"
+                            }
+                        },
+                        "status": {
+                            "old": "HASTA2_REPORTADA",
+                            "new": "ENCERRADO"
+                        },
+                        "dataDaModificacaoDoStatus": {
+                            "old": "2024-08-09T16:24:27.146426",
+                            "new": "2025-01-14T16:34:38.198069"
+                        },
+                        "encerrado": {
+                            "old": false,
+                            "new": true
+                        },
+                        "hastaAtual": {
+                            "old": "SEGUNDA_HASTA",
+                            "new": null
+                        },
+                        "ultimaHastaReportada": {
+                            "old": true,
+                            "new": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-07-30T12:00:00",
+            "segundaHasta": "2024-08-02T12:00:00",
+            "processo": {
+                "id": 14,
+                "numeroProcesso": "07074307620178070007",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "JOSILEIDE DO NASCIMENTO RAMOS",
+                "poloPassivo": "RODRIGO PINHEIRO SALOMAO",
+                "dataCriacao": "2024-07-26T16:19:23.521757",
+                "dataAlteracao": "2024-08-06T16:09:54.585014",
+                "numeroProcessoFormatado": "0707430-76.2017.8.07.0007",
+                "orgaoJulgador": {
+                    "id": 9,
+                    "idNoPje": "117",
+                    "nome": "Vara de Execução de Títulos Extrajudiciais e Conflitos Arbitrais de Taguatinga",
+                    "codigoRh": "11309210000"
+                }
+            },
+            "leiloeiro": {
+                "id": 15,
+                "nome": "ANDRE GUSTAVO BOUÇAS IGNACIO",
+                "localRealizacao": "www.brasilialeiloes.com.br",
+                "numeroJuntaComercial": "16",
+                "ativo": true,
+                "telefoneComercial": "(61) 98274-9920",
+                "enderecoComercial": "CLN 107 Bloco B, 106, Asa Norte, BRASÍLIA, DF. Complemento: Sala. CEP: 70743-520."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 31,
+                    "descricao": "Imovel situado na QNH 7, lote 07, casa 01, Taguatinga Norte , sob a matricula 100800, registrado no 3 Oficio de Registro de Imoveis do Distrito Federal, com area de 350 m2 com um sobrado edificado.",
+                    "valor": 727056.0,
+                    "valorDeArrematacao": 363528,
+                    "statusDaVenda": "VENDIDO",
+                    "hastaDaVenda": "SEGUNDA_HASTA"
+                }
+            ],
+            "deleted": false,
+            "status": "HASTA2_REPORTADA",
+            "dataDaModificacaoDoStatus": "2024-08-06T15:27:23.655016",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "VENDIDO",
+            "agendadoPor": "Marcelo de Freitas Oliveira",
+            "acaoEsperada": "---",
+            "encerrado": false,
+            "dataDoAgendamento": "2024-07-26T16:23:35.485153",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "hastaAtual": "SEGUNDA_HASTA",
+            "ultimaHastaReportada": true,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 727056.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T16:20:59.820842",
+                    "alteracoes": {
+                        "valorTotalBens": {
+                            "old": 12.0,
+                            "new": 727056.0
+                        }
+                    }
+                },
+                {
+                    "dataAlteracao": "2025-01-14T17:02:27.011894",
+                    "alteracoes": {
+                        "status": {
+                            "old": "HASTA1_NAO_REALIZADA",
+                            "new": "HASTA2_REPORTADA"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 499,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-05-26T16:30:00",
+            "segundaHasta": "2025-05-29T16:30:00",
+            "processo": {
+                "id": 465,
+                "numeroProcesso": "00387079720028070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "BARPA EMPREENDIMENTOS E PARTICIPACOES S.A.",
+                "poloPassivo": "MARIA VALERIA JIBRINE DOHER",
+                "dataCriacao": "2024-11-15T21:34:50.188436",
+                "dataAlteracao": "2025-01-14T15:26:44.905618",
+                "numeroProcessoFormatado": "0038707-97.2002.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 72,
+                    "idNoPje": "119",
+                    "nome": "13ª Vara Cível de Brasília",
+                    "codigoRh": "11201130000"
+                }
+            },
+            "leiloeiro": {
+                "id": 46,
+                "nome": "LUCAS HENRIQUE IGNACIO DE SOUZA",
+                "localRealizacao": "https://lucasignacioleiloes.com.br/",
+                "numeroJuntaComercial": "99",
+                "ativo": true,
+                "telefoneComercial": "(61) 98125-9131",
+                "enderecoComercial": "Quadra 107 Rua E, 1102, Norte (Águas Claras), BRASÍLIA, DF. Complemento: Lote 02, Residencial Vancouver, apto. CEP: 71920-180."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 675,
+                    "descricao": "Um prédio e seu respectivo terreno, situados à Rua Santa Rita, 693, no 25º Subdistrito-Pari, medindo 3,65m de frente para a Rua Santa Rita, por 26,00m da frente aos fundos, confinando de ambos os lados por parede de meação, com João Vieira, e pelos fundos com Gustavo Bresser, matriculado sob o nº 57.757 no 5º Cartório de Registro de Imóveis de São Paulo. ",
+                    "valor": 440000.0
+                }
+            ],
+            "deleted": false,
+            "status": "AGENDADO",
+            "justificativaCancelamentoSuspensao": "Decisão judicial",
+            "idJustificativaCancelamento": "220828883",
+            "dataDaModificacaoDoStatus": "2025-01-14T15:25:14.889444",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:25",
+            "justificativaRetomada": "Decisão judicial",
+            "encerrado": false,
+            "dataDoAgendamento": "2024-11-15T21:36:58.658811",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 440000.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T15:00:50.275902",
+                    "alteracoes": {
+                        "valorTotalBens": {
+                            "old": 10.0,
+                            "new": 440000.0
+                        }
+                    }
+                },
+                {
+                    "dataAlteracao": "2025-01-14T15:22:57.273331",
+                    "alteracoes": {
+                        "status": {
+                            "old": "HASTA1_NAO_REALIZADA",
+                            "new": "CANCELADO"
+                        }
+                    }
+                },
+                {
+                    "dataAlteracao": "2025-01-14T15:39:47.259499",
+                    "alteracoes": {
+                        "primeiraHasta": {
+                            "old": "2025-02-11T13:00:00",
+                            "new": "2025-05-26T16:30:00"
+                        },
+                        "segundaHasta": {
+                            "old": "2025-02-14T13:00:00",
+                            "new": "2025-05-29T16:30:00"
+                        },
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2025-01-14T14:24:23.504001",
+                                "new": "2025-01-14T15:26:44.905618"
+                            }
+                        },
+                        "bensALeiloar": {
+                            "descricao": {
+                                "old": "Imóvel que consiste em um prédio situado na Rua Santa Rita nº 693, no 25º Subdistrito-Pari, São Paulo/SP, objeto da matrícula 57.757 do 5º Cartório de Registro de Imóveis de São Paulo.",
+                                "new": "Um prédio e seu respectivo terreno, situados à Rua Santa Rita, 693, no 25º Subdistrito-Pari, medindo 3,65m de frente para a Rua Santa Rita, por 26,00m da frente aos fundos, confinando de ambos os lados por parede de meação, com João Vieira, e pelos fundos com Gustavo Bresser, matriculado sob o nº 57.757 no 5º Cartório de Registro de Imóveis de São Paulo. "
+                            }
+                        },
+                        "status": {
+                            "old": "CANCELADO",
+                            "new": "AGENDADO"
+                        },
+                        "dataDaModificacaoDoStatus": {
+                            "old": "2025-01-14T14:24:17.355568",
+                            "new": "2025-01-14T15:25:14.889444"
+                        },
+                        "agendadoPor": {
+                            "old": "Carla Edilara Araújo",
+                            "new": "Carlos Alberto Caetano"
+                        },
+                        "acaoEsperada": {
+                            "old": "---",
+                            "new": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:25"
+                        },
+                        "encerrado": {
+                            "old": true,
+                            "new": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 627,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-05-26T16:20:00",
+            "segundaHasta": "2025-05-29T16:20:00",
+            "processo": {
+                "id": 266,
+                "numeroProcesso": "07065997520198070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
+                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
+                "dataCriacao": "2024-10-14T17:58:05.911171",
+                "dataAlteracao": "2025-01-14T15:13:31.380584",
+                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 52,
+                    "idNoPje": "131",
+                    "nome": "23ª Vara Cível de Brasília",
+                    "codigoRh": "11201280000"
+                }
+            },
+            "leiloeiro": {
+                "id": 2,
+                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
+                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
+                "numeroJuntaComercial": "75",
+                "ativo": true,
+                "telefoneComercial": "(61) 3248-7475",
+                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 909,
+                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
+                    "valor": 13024096.0
+                }
+            ],
+            "deleted": false,
+            "status": "AGENDADO",
+            "justificativaCancelamentoSuspensao": "Decisão judicial",
+            "idJustificativaCancelamento": "222489917",
+            "dataDaModificacaoDoStatus": "2025-01-14T15:12:44.636917",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:12",
+            "justificativaRetomada": "Decisão judicial",
+            "encerrado": false,
+            "dataDoAgendamento": "2025-01-10T16:07:17.624513",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 13024096.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T15:22:57.276331",
+                    "alteracoes": {
+                        "primeiraHasta": {
+                            "old": "2025-03-11T12:00:00",
+                            "new": "2025-05-26T16:20:00"
+                        },
+                        "segundaHasta": {
+                            "old": "2025-03-14T12:00:00",
+                            "new": "2025-05-29T16:20:00"
+                        },
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2025-01-14T14:01:01.878747",
+                                "new": "2025-01-14T15:13:31.380584"
+                            }
+                        },
+                        "status": {
+                            "old": "SUSPENSO",
+                            "new": "AGENDADO"
+                        },
+                        "dataDaModificacaoDoStatus": {
+                            "old": "2025-01-14T14:01:01.877298",
+                            "new": "2025-01-14T15:12:44.636917"
+                        },
+                        "agendadoPor": {
+                            "old": "Carla Edilara Araújo",
+                            "new": "Carlos Alberto Caetano"
+                        },
+                        "acaoEsperada": {
+                            "old": "---",
+                            "new": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:12"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 595,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-02-18T12:00:00",
+            "segundaHasta": "2025-02-21T12:00:00",
+            "processo": {
+                "id": 266,
+                "numeroProcesso": "07065997520198070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
+                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
+                "dataCriacao": "2024-10-14T17:58:05.911171",
+                "dataAlteracao": "2025-01-14T15:13:31.380584",
+                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 52,
+                    "idNoPje": "131",
+                    "nome": "23ª Vara Cível de Brasília",
+                    "codigoRh": "11201280000"
+                }
+            },
+            "leiloeiro": {
+                "id": 2,
+                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
+                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
+                "numeroJuntaComercial": "75",
+                "ativo": true,
+                "telefoneComercial": "(61) 3248-7475",
+                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 873,
+                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
+                    "valor": 13024096.0
+                }
+            ],
+            "deleted": false,
+            "status": "CANCELADO",
+            "justificativaCancelamentoSuspensao": "decisão judicial",
+            "idJustificativaCancelamento": "221151449",
+            "dataDaModificacaoDoStatus": "2025-01-07T14:48:37.819402",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carla Edilara Araújo",
+            "acaoEsperada": "---",
+            "encerrado": true,
+            "dataDoAgendamento": "2024-12-18T17:55:37.707804",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 13024096.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T15:22:57.275330",
+                    "alteracoes": {
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2025-01-14T14:01:01.878747",
+                                "new": "2025-01-14T15:13:31.380584"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 387,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-12-02T12:10:00",
+            "segundaHasta": "2024-12-05T12:10:00",
+            "processo": {
+                "id": 266,
+                "numeroProcesso": "07065997520198070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
+                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
+                "dataCriacao": "2024-10-14T17:58:05.911171",
+                "dataAlteracao": "2025-01-14T15:13:31.380584",
+                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 52,
+                    "idNoPje": "131",
+                    "nome": "23ª Vara Cível de Brasília",
+                    "codigoRh": "11201280000"
+                }
+            },
+            "leiloeiro": {
+                "id": 2,
+                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
+                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
+                "numeroJuntaComercial": "75",
+                "ativo": true,
+                "telefoneComercial": "(61) 3248-7475",
+                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 534,
+                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
+                    "valor": 13024096.0
+                }
+            ],
+            "deleted": false,
+            "status": "CANCELADO",
+            "justificativaCancelamentoSuspensao": "decisão judicial",
+            "idJustificativaCancelamento": "218643029",
+            "dataDaModificacaoDoStatus": "2024-11-25T17:06:01.730429",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carla Edilara Araújo",
+            "acaoEsperada": "---",
+            "encerrado": true,
+            "dataDoAgendamento": "2024-10-14T18:00:57.255601",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 13024096.0,
+            "historico_alteracoes": [
+                {
+                    "dataAlteracao": "2025-01-14T15:22:57.268333",
+                    "alteracoes": {
+                        "processo": {
+                            "dataAlteracao": {
+                                "old": "2025-01-14T14:01:01.878747",
+                                "new": "2025-01-14T15:13:31.380584"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 640,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-03-11T17:20:00",
+            "segundaHasta": "2025-03-14T17:20:00",
+            "processo": {
+                "id": 581,
+                "numeroProcesso": "07164650520228070001",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "RENATA FELIPE DOS SANTOS SILVA EIRELI",
+                "poloPassivo": "BELATAVO HOLDING EMPREENDIMENTOS E PARTICIPACOES LTDA",
+                "dataCriacao": "2025-01-17T12:43:10.416939",
+                "dataAlteracao": "2025-01-17T12:44:10.3502",
+                "numeroProcessoFormatado": "0716465-05.2022.8.07.0001",
+                "orgaoJulgador": {
+                    "id": 52,
+                    "idNoPje": "131",
+                    "nome": "23ª Vara Cível de Brasília",
+                    "codigoRh": "11201280000"
+                }
+            },
+            "leiloeiro": {
+                "id": 26,
+                "nome": "ADRIANO DE SOUZA CARDOSO",
+                "localRealizacao": "WWW.CAPITALLEILOES.COM.BR",
+                "numeroJuntaComercial": "33",
+                "ativo": true,
+                "telefoneComercial": "(61) 3552-4847",
+                "enderecoComercial": "SRTVS Conjunto D Blocos A, B e C Lote 5, 527, Asa Sul, BRASÍLIA, DF. Complemento: SALA. CEP: 70340-907."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 926,
+                    "descricao": "Imóvel situado no Condomínio Morada de Deus, Rua Rota Do Messias, do Loteamento Morada de Deus, Lote 09, Setor Habitacional Jardim Botânico, Brasília/DF, com área de 874,63 m2, registrado no 2º CRI/DF, sob a matrícula n. 104533.",
+                    "valor": 450000.0
+                }
+            ],
+            "deleted": false,
+            "status": "AGENDADO",
+            "dataDaModificacaoDoStatus": "2025-01-17T12:44:10.348981",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 31/01/2025 12:44",
+            "encerrado": false,
+            "dataDoAgendamento": "2025-01-17T12:44:10.323487",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 450000.0
+        },
+        {
+            "id": 638,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2025-03-11T17:10:00",
+            "segundaHasta": "2025-03-14T17:10:00",
+            "processo": {
+                "id": 579,
+                "numeroProcesso": "07097447720228070020",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "L.F.D.S",
+                "poloPassivo": "C.A.N.D.S",
+                "dataCriacao": "2025-01-16T16:11:08.309938",
+                "dataAlteracao": "2025-01-16T16:12:56.79677",
+                "numeroProcessoFormatado": "0709744-77.2022.8.07.0020",
+                "orgaoJulgador": {
+                    "id": 84,
+                    "idNoPje": "322",
+                    "nome": "2ª Vara de Família e de Órfãos e Sucessões de Águas Claras",
+                    "codigoRh": "12501320000"
+                }
+            },
+            "leiloeiro": {
+                "id": 45,
+                "nome": "IONEIDE MARIA FERNANDES SAMPAIO",
+                "localRealizacao": "https://almoedaleiloes.com.br",
+                "numeroJuntaComercial": "102",
+                "ativo": true,
+                "telefoneComercial": "(61) 4104-3877",
+                "enderecoComercial": "SQNW 102 Bloco B, 510, Setor Noroeste, BRASÍLIA, DF. CEP: 70683-060."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 923,
+                    "descricao": "50% dos direitos incidentes sobre o imóvel situado no SHVP, Rua 05, Chácara 102, Lote 20B, Condomínio Porto Vitória, Águas Claras/DF, nele edificadas duas casas. ",
+                    "valor": 376123.55
+                }
+            ],
+            "deleted": false,
+            "status": "AGENDADO",
+            "dataDaModificacaoDoStatus": "2025-01-16T16:12:56.795088",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carlos Alberto Caetano",
+            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 30/01/2025 16:12",
+            "encerrado": false,
+            "dataDoAgendamento": "2025-01-16T16:12:56.782877",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 376123.55
+        },
         {
             "id": 637,
             "tipoDeLeilao": "ELETRONICO",
@@ -4568,128 +5510,6 @@
             "valorTotalBens": 1717957.0
         },
         {
-            "id": 499,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2025-05-26T16:30:00",
-            "segundaHasta": "2025-05-29T16:30:00",
-            "processo": {
-                "id": 465,
-                "numeroProcesso": "00387079720028070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "BARPA EMPREENDIMENTOS E PARTICIPACOES S.A.",
-                "poloPassivo": "MARIA VALERIA JIBRINE DOHER",
-                "dataCriacao": "2024-11-15T21:34:50.188436",
-                "dataAlteracao": "2025-01-14T15:26:44.905618",
-                "numeroProcessoFormatado": "0038707-97.2002.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 72,
-                    "idNoPje": "119",
-                    "nome": "13ª Vara Cível de Brasília",
-                    "codigoRh": "11201130000"
-                }
-            },
-            "leiloeiro": {
-                "id": 46,
-                "nome": "LUCAS HENRIQUE IGNACIO DE SOUZA",
-                "localRealizacao": "https://lucasignacioleiloes.com.br/",
-                "numeroJuntaComercial": "99",
-                "ativo": true,
-                "telefoneComercial": "(61) 98125-9131",
-                "enderecoComercial": "Quadra 107 Rua E, 1102, Norte (Águas Claras), BRASÍLIA, DF. Complemento: Lote 02, Residencial Vancouver, apto. CEP: 71920-180."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 675,
-                    "descricao": "Um prédio e seu respectivo terreno, situados à Rua Santa Rita, 693, no 25º Subdistrito-Pari, medindo 3,65m de frente para a Rua Santa Rita, por 26,00m da frente aos fundos, confinando de ambos os lados por parede de meação, com João Vieira, e pelos fundos com Gustavo Bresser, matriculado sob o nº 57.757 no 5º Cartório de Registro de Imóveis de São Paulo. ",
-                    "valor": 440000.0
-                }
-            ],
-            "deleted": false,
-            "status": "AGENDADO",
-            "justificativaCancelamentoSuspensao": "Decisão judicial",
-            "idJustificativaCancelamento": "220828883",
-            "dataDaModificacaoDoStatus": "2025-01-14T15:25:14.889444",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carlos Alberto Caetano",
-            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:25",
-            "justificativaRetomada": "Decisão judicial",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-11-15T21:36:58.658811",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 440000.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T15:00:50.275902",
-                    "alteracoes": {
-                        "valorTotalBens": {
-                            "old": 10.0,
-                            "new": 440000.0
-                        }
-                    }
-                },
-                {
-                    "dataAlteracao": "2025-01-14T15:22:57.273331",
-                    "alteracoes": {
-                        "status": {
-                            "old": "HASTA1_NAO_REALIZADA",
-                            "new": "CANCELADO"
-                        }
-                    }
-                },
-                {
-                    "dataAlteracao": "2025-01-14T15:39:47.259499",
-                    "alteracoes": {
-                        "primeiraHasta": {
-                            "old": "2025-02-11T13:00:00",
-                            "new": "2025-05-26T16:30:00"
-                        },
-                        "segundaHasta": {
-                            "old": "2025-02-14T13:00:00",
-                            "new": "2025-05-29T16:30:00"
-                        },
-                        "processo": {
-                            "dataAlteracao": {
-                                "old": "2025-01-14T14:24:23.504001",
-                                "new": "2025-01-14T15:26:44.905618"
-                            }
-                        },
-                        "bensALeiloar": {
-                            "descricao": {
-                                "old": "Imóvel que consiste em um prédio situado na Rua Santa Rita nº 693, no 25º Subdistrito-Pari, São Paulo/SP, objeto da matrícula 57.757 do 5º Cartório de Registro de Imóveis de São Paulo.",
-                                "new": "Um prédio e seu respectivo terreno, situados à Rua Santa Rita, 693, no 25º Subdistrito-Pari, medindo 3,65m de frente para a Rua Santa Rita, por 26,00m da frente aos fundos, confinando de ambos os lados por parede de meação, com João Vieira, e pelos fundos com Gustavo Bresser, matriculado sob o nº 57.757 no 5º Cartório de Registro de Imóveis de São Paulo. "
-                            }
-                        },
-                        "status": {
-                            "old": "CANCELADO",
-                            "new": "AGENDADO"
-                        },
-                        "dataDaModificacaoDoStatus": {
-                            "old": "2025-01-14T14:24:17.355568",
-                            "new": "2025-01-14T15:25:14.889444"
-                        },
-                        "agendadoPor": {
-                            "old": "Carla Edilara Araújo",
-                            "new": "Carlos Alberto Caetano"
-                        },
-                        "acaoEsperada": {
-                            "old": "---",
-                            "new": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:25"
-                        },
-                        "encerrado": {
-                            "old": true,
-                            "new": false
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "id": 497,
             "tipoDeLeilao": "ELETRONICO",
             "tipoDeBemALeiloar": "IMOVEL",
@@ -6233,73 +7053,6 @@
             "valorTotalBens": 2900.0
         },
         {
-            "id": 463,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2025-02-04T17:00:00",
-            "segundaHasta": "2025-02-07T17:00:00",
-            "processo": {
-                "id": 431,
-                "numeroProcesso": "07480836520228070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "CONJUNTO RESIDENCIAL 07 (CR-07)",
-                "poloPassivo": "JOSE CELSO GONTIJO ENGENHARIA S/A",
-                "dataCriacao": "2024-11-06T13:53:03.671768",
-                "dataAlteracao": "2024-11-06T13:54:09.126633",
-                "numeroProcessoFormatado": "0748083-65.2022.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 17,
-                    "idNoPje": "127",
-                    "nome": "19ª Vara Cível de Brasília",
-                    "codigoRh": "11201190000"
-                }
-            },
-            "leiloeiro": {
-                "id": 1,
-                "nome": "MARTHA HELENA TOBIAS DA SILVA",
-                "localRealizacao": "www.marthahelenaleiloeira.com.br",
-                "numeroJuntaComercial": "103",
-                "ativo": true,
-                "telefoneComercial": "(61) 9927-2078",
-                "enderecoComercial": "ARNIQUEIRA VEREDAO, LOTE 07 , TAGUATINGA/DF, BRASÍLIA, DF. Complemento: GALPAOZINHO. CEP: 72000-000."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 626,
-                    "descricao": "Imóvel situado no Conjunto Residencial 07 CR 07, Bloco H, Apartamento 808, Valparaíso de Goiás/GO, registrado no Cartório de Registro de Imóveis e Anexos da Comarca de Valparaíso de Goiás/GO, sob a matrícula nº 44.013.",
-                    "valor": 140000.0
-                }
-            ],
-            "deleted": false,
-            "status": "AGENDADO",
-            "dataDaModificacaoDoStatus": "2024-11-06T13:54:09.125625",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carlos Alberto Caetano",
-            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 22/11/2024 13:54",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-11-06T13:54:09.126633",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 140000.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-15T15:00:12.049203",
-                    "alteracoes": {
-                        "processo": {
-                            "poloPassivo": {
-                                "old": "JOSÉ CELSO GONTIJO ENGENHARIA S/A",
-                                "new": "JOSE CELSO GONTIJO ENGENHARIA S/A"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "id": 462,
             "tipoDeLeilao": "ELETRONICO",
             "tipoDeBemALeiloar": "IMOVEL",
@@ -6409,60 +7162,6 @@
             "ultimaHastaReportada": false,
             "certidaoRemovidoAoDepositoPublico": false,
             "valorTotalBens": 600000.0
-        },
-        {
-            "id": 460,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2025-02-03T13:30:00",
-            "segundaHasta": "2025-02-06T13:30:00",
-            "processo": {
-                "id": 428,
-                "numeroProcesso": "07013131820218070011",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "CONDOMINIO DA PROJECAO Y E Z DA AREA ESPECIAL 07",
-                "poloPassivo": "DELMA SAUDE SOARES",
-                "dataCriacao": "2024-10-31T14:51:49.652831",
-                "dataAlteracao": "2024-10-31T14:52:54.85689",
-                "numeroProcessoFormatado": "0701313-18.2021.8.07.0011",
-                "orgaoJulgador": {
-                    "id": 95,
-                    "idNoPje": "38",
-                    "nome": "Juizado Especial Cível e Criminal do Núcleo Bandeirante",
-                    "codigoRh": "12304010000"
-                }
-            },
-            "leiloeiro": {
-                "id": 13,
-                "nome": "FÁBIO MANOEL GUIMARÃES ",
-                "localRealizacao": "www.fabioleiloes.com.br",
-                "numeroJuntaComercial": "109",
-                "ativo": true,
-                "telefoneComercial": "(21) 96419-7304",
-                "enderecoComercial": "CRS 502 Bloco C, 502, Asa Sul, BRASÍLIA, DF. Complemento: Bloco C, Loja 37, Parte 921. CEP: 70330-530."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 623,
-                    "descricao": "apartamento nº 101, do Edifício Pires do Rio, construído nos Lotes Y e Z, Área Especial nº 07, do Setor Avenida Contorno, do Núcleo Bandeirante, matrícula nº 43696 do 4º Ofício do Registro de Imóveis do Distrito Federal. Consulte os termos do edital. Avaliação ",
-                    "valor": 280000.0
-                }
-            ],
-            "deleted": false,
-            "status": "AGENDADO",
-            "dataDaModificacaoDoStatus": "2024-10-31T14:52:54.855802",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Joyanna Loara do Passo",
-            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 18/11/2024 14:52",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-10-31T14:52:54.85689",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 280000.0
         },
         {
             "id": 459,
@@ -9733,238 +10432,6 @@
             "valorTotalBens": 13024096.0
         },
         {
-            "id": 387,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-12-02T12:10:00",
-            "segundaHasta": "2024-12-05T12:10:00",
-            "processo": {
-                "id": 266,
-                "numeroProcesso": "07065997520198070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
-                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
-                "dataCriacao": "2024-10-14T17:58:05.911171",
-                "dataAlteracao": "2025-01-14T15:13:31.380584",
-                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 52,
-                    "idNoPje": "131",
-                    "nome": "23ª Vara Cível de Brasília",
-                    "codigoRh": "11201280000"
-                }
-            },
-            "leiloeiro": {
-                "id": 2,
-                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
-                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
-                "numeroJuntaComercial": "75",
-                "ativo": true,
-                "telefoneComercial": "(61) 3248-7475",
-                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 534,
-                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
-                    "valor": 13024096.0
-                }
-            ],
-            "deleted": false,
-            "status": "CANCELADO",
-            "justificativaCancelamentoSuspensao": "decisão judicial",
-            "idJustificativaCancelamento": "218643029",
-            "dataDaModificacaoDoStatus": "2024-11-25T17:06:01.730429",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carla Edilara Araújo",
-            "acaoEsperada": "---",
-            "encerrado": true,
-            "dataDoAgendamento": "2024-10-14T18:00:57.255601",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 13024096.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T15:22:57.268333",
-                    "alteracoes": {
-                        "processo": {
-                            "dataAlteracao": {
-                                "old": "2025-01-14T14:01:01.878747",
-                                "new": "2025-01-14T15:13:31.380584"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "id": 595,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2025-02-18T12:00:00",
-            "segundaHasta": "2025-02-21T12:00:00",
-            "processo": {
-                "id": 266,
-                "numeroProcesso": "07065997520198070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
-                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
-                "dataCriacao": "2024-10-14T17:58:05.911171",
-                "dataAlteracao": "2025-01-14T15:13:31.380584",
-                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 52,
-                    "idNoPje": "131",
-                    "nome": "23ª Vara Cível de Brasília",
-                    "codigoRh": "11201280000"
-                }
-            },
-            "leiloeiro": {
-                "id": 2,
-                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
-                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
-                "numeroJuntaComercial": "75",
-                "ativo": true,
-                "telefoneComercial": "(61) 3248-7475",
-                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 873,
-                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
-                    "valor": 13024096.0
-                }
-            ],
-            "deleted": false,
-            "status": "CANCELADO",
-            "justificativaCancelamentoSuspensao": "decisão judicial",
-            "idJustificativaCancelamento": "221151449",
-            "dataDaModificacaoDoStatus": "2025-01-07T14:48:37.819402",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carla Edilara Araújo",
-            "acaoEsperada": "---",
-            "encerrado": true,
-            "dataDoAgendamento": "2024-12-18T17:55:37.707804",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 13024096.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T15:22:57.275330",
-                    "alteracoes": {
-                        "processo": {
-                            "dataAlteracao": {
-                                "old": "2025-01-14T14:01:01.878747",
-                                "new": "2025-01-14T15:13:31.380584"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "id": 627,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2025-05-26T16:20:00",
-            "segundaHasta": "2025-05-29T16:20:00",
-            "processo": {
-                "id": 266,
-                "numeroProcesso": "07065997520198070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "LUIZ CARLOS DOS SANTOS",
-                "poloPassivo": "MARTINEZ EMPREENDIMENTOS IMOBILIARIOS LTDA - ME",
-                "dataCriacao": "2024-10-14T17:58:05.911171",
-                "dataAlteracao": "2025-01-14T15:13:31.380584",
-                "numeroProcessoFormatado": "0706599-75.2019.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 52,
-                    "idNoPje": "131",
-                    "nome": "23ª Vara Cível de Brasília",
-                    "codigoRh": "11201280000"
-                }
-            },
-            "leiloeiro": {
-                "id": 2,
-                "nome": "LUCIANO GONÇALVES BORBA ASSUNÇÃO",
-                "localRealizacao": "www.leiloeirosdebrasilia.com.br",
-                "numeroJuntaComercial": "75",
-                "ativo": true,
-                "telefoneComercial": "(61) 3248-7475",
-                "enderecoComercial": "SCS Quadra 1 Bloco B Lote 16/18, Sala 201, Asa Sul, BRASÍLIA, DF. Complemento: Edifício Maristela. CEP: 70308-900."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 909,
-                    "descricao": " Imovel: uma area de terras com 4.3611 ha de terras na Fazenda Serandy, situada em Planaltina/DF, sob a matricula n. 9.216, registrada no 8º Oficio de Registro de Imoveis do Distrito Federal, com uma area total de 4,3611 Ha Quatro hectares e trinta e seis ares e onze centiares. Consulte os termos do edital. Avaliacao ",
-                    "valor": 13024096.0
-                }
-            ],
-            "deleted": false,
-            "status": "AGENDADO",
-            "justificativaCancelamentoSuspensao": "Decisão judicial",
-            "idJustificativaCancelamento": "222489917",
-            "dataDaModificacaoDoStatus": "2025-01-14T15:12:44.636917",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carlos Alberto Caetano",
-            "acaoEsperada": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:12",
-            "justificativaRetomada": "Decisão judicial",
-            "encerrado": false,
-            "dataDoAgendamento": "2025-01-10T16:07:17.624513",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 13024096.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T15:22:57.276331",
-                    "alteracoes": {
-                        "primeiraHasta": {
-                            "old": "2025-03-11T12:00:00",
-                            "new": "2025-05-26T16:20:00"
-                        },
-                        "segundaHasta": {
-                            "old": "2025-03-14T12:00:00",
-                            "new": "2025-05-29T16:20:00"
-                        },
-                        "processo": {
-                            "dataAlteracao": {
-                                "old": "2025-01-14T14:01:01.878747",
-                                "new": "2025-01-14T15:13:31.380584"
-                            }
-                        },
-                        "status": {
-                            "old": "SUSPENSO",
-                            "new": "AGENDADO"
-                        },
-                        "dataDaModificacaoDoStatus": {
-                            "old": "2025-01-14T14:01:01.877298",
-                            "new": "2025-01-14T15:12:44.636917"
-                        },
-                        "agendadoPor": {
-                            "old": "Carla Edilara Araújo",
-                            "new": "Carlos Alberto Caetano"
-                        },
-                        "acaoEsperada": {
-                            "old": "---",
-                            "new": "Elabore a minuta do edital e envie-a por e-mail ao cartório.<br/>Prazo: 28/01/2025 15:12"
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "id": 386,
             "tipoDeLeilao": "ELETRONICO",
             "tipoDeBemALeiloar": "IMOVEL",
@@ -13194,75 +13661,6 @@
             "ultimaHastaReportada": true,
             "certidaoRemovidoAoDepositoPublico": false,
             "valorTotalBens": 2400000.0
-        },
-        {
-            "id": 311,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-11-04T16:10:00",
-            "segundaHasta": "2024-11-07T16:10:00",
-            "processo": {
-                "id": 297,
-                "numeroProcesso": "07163784920228070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "CONJUNTO RESIDENCIAL 07 (CR-07)",
-                "poloPassivo": "JOSE CELSO GONTIJO ENGENHARIA S/A",
-                "dataCriacao": "2024-09-18T15:42:05.439527",
-                "dataAlteracao": "2024-11-08T09:52:48.372598",
-                "numeroProcessoFormatado": "0716378-49.2022.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 29,
-                    "idNoPje": "126",
-                    "nome": "10ª Vara Cível de Brasília",
-                    "codigoRh": "11201100000"
-                }
-            },
-            "leiloeiro": {
-                "id": 30,
-                "nome": "FERNANDO GONÇALVES COSTA",
-                "localRealizacao": "www.multleiloes.com",
-                "numeroJuntaComercial": "10",
-                "ativo": true,
-                "telefoneComercial": "(61) 3465-2074",
-                "enderecoComercial": "SOFN Quadra 1 Conjunto A, 8, Zona Industrial, BRASÍLIA, DF. Complemento: MULTLEILOES.COM. CEP: 70634-110."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 437,
-                    "descricao": "Imóvel situado no Conjunto Residencial 07 CR 07, Bloco C, Apartamento 101, Parque das Cachoeiras, Valparaíso de Goiás/GO, inscrito no Registro de Imóveis da Comarca de Valparaíso de Goiás/GO, sob a matrícula n. 2518, com área privativa de 48,31 m2, composto de dois quartos, circulação, banheiro social, sala, cozinha conjugada com área de serviço e Vaga de Garagem n. 768.",
-                    "valor": 160000.0
-                }
-            ],
-            "deleted": false,
-            "status": "ENCERRADO",
-            "dataDaModificacaoDoStatus": "2024-11-08T09:52:48.364838",
-            "arrematacaoGlobal": true,
-            "valorArrematacaoGlobal": 107000,
-            "statusDaVenda": "VENDIDO",
-            "hastaDaVenda": "SEGUNDA_HASTA",
-            "agendadoPor": "Carlos Alberto Caetano",
-            "acaoEsperada": "---",
-            "encerrado": true,
-            "dataDoAgendamento": "2024-09-18T15:43:16.302218",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 160000.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-15T15:00:12.044202",
-                    "alteracoes": {
-                        "processo": {
-                            "poloPassivo": {
-                                "old": "JOSÉ CELSO GONTIJO ENGENHARIA S/A",
-                                "new": "JOSE CELSO GONTIJO ENGENHARIA S/A"
-                            }
-                        }
-                    }
-                }
-            ]
         },
         {
             "id": 310,
@@ -23040,94 +23438,6 @@
             "valorTotalBens": 270000.0
         },
         {
-            "id": 114,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-08-06T14:20:00",
-            "segundaHasta": "2024-08-09T14:20:00",
-            "processo": {
-                "id": 112,
-                "numeroProcesso": "00066561320148070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "BRB BANCO DE BRASILIA SA",
-                "poloPassivo": "RAQUEL RIZZA VIEIRA MESQUITA",
-                "dataCriacao": "2024-08-01T15:16:09.022899",
-                "dataAlteracao": "2025-01-14T16:39:44.699618",
-                "numeroProcessoFormatado": "0006656-13.2014.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 3,
-                    "idNoPje": "95",
-                    "nome": "2ª Vara de Execução de Títulos Extrajudiciais e Conflitos Arbitrais de Brasília",
-                    "codigoRh": "11209420000"
-                }
-            },
-            "leiloeiro": {
-                "id": 8,
-                "nome": "MOUZAR BASTON FILHO",
-                "localRealizacao": "https://www.bastonleiloes.com.br/",
-                "numeroJuntaComercial": "115",
-                "ativo": true,
-                "telefoneComercial": "(16) 99200-0339",
-                "enderecoComercial": "SRTVS Conjunto L Lote 38, 38, Asa Sul, BRASÍLIA, DF. Complemento: SALA 717. CEP: 70340-906."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 152,
-                    "descricao": "Imóvel rural, denominado FAZENDA JACARUTU, localizada no município de Padre Bernardo/GO, sob a matricula n? 10.937 do Registro de Imóveis de Padre Bernardo/GO. Consulte os termos do edital. Avaliação",
-                    "valor": 12070000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                }
-            ],
-            "deleted": false,
-            "status": "ENCERRADO",
-            "dataDaModificacaoDoStatus": "2025-01-14T16:34:38.198069",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carla Edilara Araújo",
-            "acaoEsperada": "---",
-            "encerrado": true,
-            "dataDoAgendamento": "2024-08-01T15:19:14.4014",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "ultimaHastaReportada": false,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 12070000.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T17:02:27.012899",
-                    "alteracoes": {
-                        "processo": {
-                            "dataAlteracao": {
-                                "old": "2024-08-09T16:24:27.153296",
-                                "new": "2025-01-14T16:39:44.699618"
-                            }
-                        },
-                        "status": {
-                            "old": "HASTA2_REPORTADA",
-                            "new": "ENCERRADO"
-                        },
-                        "dataDaModificacaoDoStatus": {
-                            "old": "2024-08-09T16:24:27.146426",
-                            "new": "2025-01-14T16:34:38.198069"
-                        },
-                        "encerrado": {
-                            "old": false,
-                            "new": true
-                        },
-                        "hastaAtual": {
-                            "old": "SEGUNDA_HASTA",
-                            "new": null
-                        },
-                        "ultimaHastaReportada": {
-                            "old": true,
-                            "new": false
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "id": 634,
             "tipoDeLeilao": "ELETRONICO",
             "tipoDeBemALeiloar": "IMOVEL",
@@ -23234,6 +23544,62 @@
             "acaoSalvarAposAgendado": false,
             "hastaAtual": "SEGUNDA_HASTA",
             "ultimaHastaReportada": true,
+            "certidaoRemovidoAoDepositoPublico": false,
+            "valorTotalBens": 42000.0
+        },
+        {
+            "id": 113,
+            "tipoDeLeilao": "ELETRONICO",
+            "tipoDeBemALeiloar": "IMOVEL",
+            "primeiraHasta": "2024-08-02T12:40:00",
+            "segundaHasta": "2024-08-05T12:40:00",
+            "processo": {
+                "id": 111,
+                "numeroProcesso": "07025134020198070008",
+                "instancia": "PRIMEIRAINSTANCIA",
+                "poloAtivo": "MARIA VERA LUCIA FERREIRA DO NASCIMENTO",
+                "poloPassivo": "MANOEL MESSIAS RODRIGUES AMANCIO",
+                "dataCriacao": "2024-08-01T14:41:50.31884",
+                "dataAlteracao": "2024-09-05T17:44:24.416265",
+                "numeroProcessoFormatado": "0702513-40.2019.8.07.0008",
+                "orgaoJulgador": {
+                    "id": 39,
+                    "idNoPje": "170",
+                    "nome": "Vara Cível do Paranoá",
+                    "codigoRh": "11901010000"
+                }
+            },
+            "leiloeiro": {
+                "id": 14,
+                "nome": "MOACIRA TEGONI GOEDERT",
+                "localRealizacao": "www.moacira.lel.br",
+                "numeroJuntaComercial": "63",
+                "ativo": true,
+                "telefoneComercial": "(61) 3041-9533",
+                "enderecoComercial": "SBS Quadra 2, 2, Asa Sul, BRASÍLIA, DF. Complemento: Bloco E, Ed. Prime, sala 206. CEP: 70070-120."
+            },
+            "bensALeiloar": [
+                {
+                    "id": 151,
+                    "descricao": "Direitos possessórios do Imóvel localizado no Conjunto Residencial 102, Lote 14, Vale do Amanhecer Planaltina-DF, o imóvel consiste em lote de cerca de 110m2, sem edificações. Consulte os termos do edital. Avaliação",
+                    "valor": 42000.0
+                }
+            ],
+            "deleted": false,
+            "status": "CANCELADO",
+            "justificativaCancelamentoSuspensao": "erro no agendamento",
+            "idJustificativaCancelamento": "000",
+            "dataDaModificacaoDoStatus": "2024-08-01T19:00:34.517346",
+            "arrematacaoGlobal": false,
+            "statusDaVenda": "NAO_VENDIDO",
+            "agendadoPor": "Carla Edilara Araújo",
+            "acaoEsperada": "---",
+            "encerrado": false,
+            "dataDoAgendamento": "2024-08-01T15:14:10.47632",
+            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
+            "agendarEenviarAoPje": false,
+            "acaoSalvarAposAgendado": false,
+            "ultimaHastaReportada": false,
             "certidaoRemovidoAoDepositoPublico": false,
             "valorTotalBens": 42000.0
         },
@@ -24247,99 +24613,6 @@
             "ultimaHastaReportada": true,
             "certidaoRemovidoAoDepositoPublico": false,
             "valorTotalBens": 282000.0
-        },
-        {
-            "id": 97,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-08-06T16:10:00",
-            "segundaHasta": "2024-08-09T16:10:00",
-            "processo": {
-                "id": 95,
-                "numeroProcesso": "01800021520088070001",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "M.P.D.D.F.E.T",
-                "poloPassivo": "A.P.E.L",
-                "dataCriacao": "2024-07-31T16:36:07.740525",
-                "dataAlteracao": "2024-08-12T12:33:22.148691",
-                "numeroProcessoFormatado": "0180002-15.2008.8.07.0001",
-                "orgaoJulgador": {
-                    "id": 46,
-                    "idNoPje": "251",
-                    "nome": "5ª Vara Criminal de Brasília",
-                    "codigoRh": "11202050000"
-                }
-            },
-            "leiloeiro": {
-                "id": 27,
-                "nome": "JOSÉ LUIZ PEREIRA VIZEU",
-                "localRealizacao": "https://www.flexleiloes.com.br/home/",
-                "numeroJuntaComercial": "37",
-                "ativo": true,
-                "telefoneComercial": "(61) 4063-8301",
-                "enderecoComercial": "STRC Trecho 2 Conjunto B, 02/03, Zona Industrial (Guará), BRASÍLIA, DF. CEP: 71225-522."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 131,
-                    "descricao": "Alienação antecipada com base no artigo 144-A do CPP - Item 1: Imóvel de matrícula n. 246378, do 3º CRI/DF, denominado Quiosque n. 03, com área de 9 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF,  ",
-                    "valor": 75000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                },
-                {
-                    "id": 132,
-                    "descricao": "Item 2: Imóvel de matrícula n. 246379, do 3º CRI/DF, denominado Quiosque n. 04, com área de 9 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF ",
-                    "valor": 75000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                },
-                {
-                    "id": 133,
-                    "descricao": "Item 3: Imóvel de matrícula n. 246421, do 3º CRI/DF, denominado Quiosque n. 05, com área de 46,5 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF",
-                    "valor": 170000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                },
-                {
-                    "id": 134,
-                    "descricao": "Item 4 Imóvel de matrícula n. 246353, do 3º CRI/DF, denominado Loja n. 10, com área de 59 m2, situado na Rua das Paineiras, Lote 06, Aguas Claras/DF,",
-                    "valor": 380000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                },
-                {
-                    "id": 135,
-                    "descricao": " Item 5: Imóvel de matrícula n. 246380, do 3º CRI/DF, denominado Loja n. 33, com área de 33,10 m2, situado na Rua das Paineiras, Lote 06, Águas Claras/DF",
-                    "valor": 220000.0,
-                    "statusDaVenda": "NAO_VENDIDO"
-                }
-            ],
-            "deleted": false,
-            "status": "HASTA2_REPORTADA",
-            "dataDaModificacaoDoStatus": "2024-08-12T12:33:22.144226",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "NAO_VENDIDO",
-            "agendadoPor": "Carla Edilara Araújo",
-            "acaoEsperada": "---",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-07-31T16:43:56.292348",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "hastaAtual": "SEGUNDA_HASTA",
-            "ultimaHastaReportada": true,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 920000.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-15T15:00:12.041213",
-                    "alteracoes": {
-                        "processo": {
-                            "poloAtivo": {
-                                "old": "M.P.D.U",
-                                "new": "M.P.D.D.F.E.T"
-                            }
-                        }
-                    }
-                }
-            ]
         },
         {
             "id": 95,
@@ -28508,84 +28781,6 @@
             "ultimaHastaReportada": false,
             "certidaoRemovidoAoDepositoPublico": false,
             "valorTotalBens": 121630.0
-        },
-        {
-            "id": 15,
-            "tipoDeLeilao": "ELETRONICO",
-            "tipoDeBemALeiloar": "IMOVEL",
-            "primeiraHasta": "2024-07-30T12:00:00",
-            "segundaHasta": "2024-08-02T12:00:00",
-            "processo": {
-                "id": 14,
-                "numeroProcesso": "07074307620178070007",
-                "instancia": "PRIMEIRAINSTANCIA",
-                "poloAtivo": "JOSILEIDE DO NASCIMENTO RAMOS",
-                "poloPassivo": "RODRIGO PINHEIRO SALOMAO",
-                "dataCriacao": "2024-07-26T16:19:23.521757",
-                "dataAlteracao": "2024-08-06T16:09:54.585014",
-                "numeroProcessoFormatado": "0707430-76.2017.8.07.0007",
-                "orgaoJulgador": {
-                    "id": 9,
-                    "idNoPje": "117",
-                    "nome": "Vara de Execução de Títulos Extrajudiciais e Conflitos Arbitrais de Taguatinga",
-                    "codigoRh": "11309210000"
-                }
-            },
-            "leiloeiro": {
-                "id": 15,
-                "nome": "ANDRE GUSTAVO BOUÇAS IGNACIO",
-                "localRealizacao": "www.brasilialeiloes.com.br",
-                "numeroJuntaComercial": "16",
-                "ativo": true,
-                "telefoneComercial": "(61) 98274-9920",
-                "enderecoComercial": "CLN 107 Bloco B, 106, Asa Norte, BRASÍLIA, DF. Complemento: Sala. CEP: 70743-520."
-            },
-            "bensALeiloar": [
-                {
-                    "id": 31,
-                    "descricao": "Imovel situado na QNH 7, lote 07, casa 01, Taguatinga Norte , sob a matricula 100800, registrado no 3 Oficio de Registro de Imoveis do Distrito Federal, com area de 350 m2 com um sobrado edificado.",
-                    "valor": 727056.0,
-                    "valorDeArrematacao": 363528,
-                    "statusDaVenda": "VENDIDO",
-                    "hastaDaVenda": "SEGUNDA_HASTA"
-                }
-            ],
-            "deleted": false,
-            "status": "HASTA2_REPORTADA",
-            "dataDaModificacaoDoStatus": "2024-08-06T15:27:23.655016",
-            "arrematacaoGlobal": false,
-            "statusDaVenda": "VENDIDO",
-            "agendadoPor": "Marcelo de Freitas Oliveira",
-            "acaoEsperada": "---",
-            "encerrado": false,
-            "dataDoAgendamento": "2024-07-26T16:23:35.485153",
-            "envioAutomaticoCertidaoDesignacaoAoPJE": false,
-            "agendarEenviarAoPje": false,
-            "acaoSalvarAposAgendado": false,
-            "hastaAtual": "SEGUNDA_HASTA",
-            "ultimaHastaReportada": true,
-            "certidaoRemovidoAoDepositoPublico": false,
-            "valorTotalBens": 727056.0,
-            "historico_alteracoes": [
-                {
-                    "dataAlteracao": "2025-01-14T16:20:59.820842",
-                    "alteracoes": {
-                        "valorTotalBens": {
-                            "old": 12.0,
-                            "new": 727056.0
-                        }
-                    }
-                },
-                {
-                    "dataAlteracao": "2025-01-14T17:02:27.011894",
-                    "alteracoes": {
-                        "status": {
-                            "old": "HASTA1_NAO_REALIZADA",
-                            "new": "HASTA2_REPORTADA"
-                        }
-                    }
-                }
-            ]
         },
         {
             "id": 14,

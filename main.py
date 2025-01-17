@@ -162,7 +162,6 @@ def buscarDados():
     ignore_fields = ["data_atualizacao_api", "historico_alteracoes"] 
     changes = check_for_changes(lotes, all_leiloes,ignore_fields)
     
-    save_to_json(changes, "mudancas.json")
     
     # Atualiza apenas os leilões modificados
     for leilao in changes:
@@ -245,6 +244,12 @@ def send_email(subject, body):
         print(f"Erro ao enviar e-mail: {str(e)}")
 
 # -------------------- Layout da Aplicação --------------------
+
+st.set_page_config(
+        page_title="Leilões Judiciais - DF",
+        page_icon="⚖️"
+    )
+
 st.title("Leilojus - Busca de Leilões")
 
 # -------------------- Carregamento de Dados --------------------
@@ -284,7 +289,8 @@ selected_sort = st.sidebar.selectbox(
         "Data 1º Leilão, Crescente",
         "Data 1º Leilão, Decrescente",
         "Data de Criação, Crescente",
-        "Data de Criação, Decrescente"
+        "Data de Criação, Decrescente",
+        "Data de Atualização, Decrescente",
     ], index=3
 )
 selected_status = st.sidebar.selectbox("Status do Leilão", ["", "HASTA2_REPORTADA", "HASTA3_REPORTADA", "SUSPENSO", "CANCELADO", "ENCERRADO", "AGENDADO", "HASTA1_NAO_REALIZADA", "ANALISAR_SUSPENSAO_CANCELAMENTO"])
@@ -331,6 +337,12 @@ elif selected_sort == "Data de Criação, Crescente":
     filtered_data.sort(key=lambda x: pd.to_datetime(x["processo"]["dataCriacao"]))
 elif selected_sort == "Data de Criação, Decrescente":
     filtered_data.sort(key=lambda x: pd.to_datetime(x["processo"]["dataCriacao"]), reverse=True)
+elif selected_sort == "Data de Atualização, Decrescente":
+    filtered_data.sort(key=lambda x: (
+        max((pd.to_datetime(h["dataAlteracao"]).tz_localize(None) for h in x.get("historico_alteracoes", [])), default=pd.Timestamp.min),
+        pd.to_datetime(x["processo"]["dataCriacao"]).tz_localize(None)
+    ), reverse=True)
+
 else:
     filtered_data.sort(key=lambda x: pd.to_datetime(x["primeiraHasta"]))
 # -------------------- Paginação --------------------
@@ -420,34 +432,49 @@ if page_data:
         
         c.html(lista_bens)
 
-         # Exibir alterações
+        # Exibir alterações
         with c:
             if 'historico_alteracoes' in leilao and leilao['historico_alteracoes']:
                 grouped_changes = {}
 
                 # Agrupar alterações por data
                 for alteracao in leilao['historico_alteracoes']:
-                    data_alteracao = alteracao['dataAlteracao']
+                    data_alteracao = alteracao.get('dataAlteracao', 'Data desconhecida')
                     if data_alteracao not in grouped_changes:
                         grouped_changes[data_alteracao] = []
 
-                    for campo, valores in alteracao['alteracoes'].items():
-                        # Verificar se 'old' e 'new' existem antes de acessar
-                        if 'old' in valores and 'new' in valores:
-                            old_value = valores['old']
-                            new_value = valores['new']
-                            if old_value != new_value:
-                                grouped_changes[data_alteracao].append((campo, old_value, new_value))
+                    # Processar alterações, incluindo campos aninhados
+                    def process_changes(prefix, changes):
+                        for campo, valores in changes.items():
+                            # Se os valores forem um dicionário, verificar 'old' e 'new'
+                            if isinstance(valores, dict):
+                                if 'old' in valores and 'new' in valores:
+                                    old_value = valores['old']
+                                    new_value = valores['new']
+                                    if old_value != new_value:
+                                        campo_completo = f"{prefix}{campo}" if prefix else campo
+                                        grouped_changes[data_alteracao].append((campo_completo, old_value, new_value))
+                                else:
+                                    # Explorar níveis mais profundos de aninhamento
+                                    process_changes(f"{prefix}{campo}.", valores)
+                            else:
+                                # Caso inesperado, ignorar ou logar
+                                continue
+
+                    process_changes("", alteracao.get('alteracoes', {}))
 
                 sorted_dates = sorted(grouped_changes.keys(), reverse=True)
-                
+
                 # Exibir as alterações agrupadas por data
                 with st.expander("Alterações"):
                     if grouped_changes:
                         for data in sorted_dates:
                             st.write(f"**DATA DA ALTERAÇÃO:** {format_date(data)}")
                             for campo, old_value, new_value in grouped_changes[data]:
-                                st.write(f"  **{campo}:**  {old_value} ➡️ {new_value}") 
+                                st.write(f"  **{campo}:**  {old_value} ➡️ {new_value}")
                             st.divider()
+
+
+
 else:
     st.info("Nenhum leilão encontrado para os filtros selecionados.")
