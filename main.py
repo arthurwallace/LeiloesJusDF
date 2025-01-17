@@ -9,6 +9,8 @@ from datetime import datetime
 from trycourier import Courier
 from dotenv import load_dotenv
 import pytz
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 fuso_horario_brasil = pytz.timezone('America/Sao_Paulo')
 
@@ -16,8 +18,16 @@ fuso_horario_brasil = pytz.timezone('America/Sao_Paulo')
 load_dotenv()
 
 # Obter variáveis de ambiente
+MONGO_URI = os.getenv('MONGO_URI')
 COURIER_API_TOKEN = os.getenv('COURIER_API_TOKEN')
 EMAIL_DESTINATARIOS = os.getenv('EMAIL_DESTINATARIOS').split(',')
+
+# Conectar ao cliente MongoDB
+client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
+
+db = client["leiloes_judiciais"]
+dados_gerais_collection = db["dados_gerais"]
+lotes_collection = db["lotes"]
 
 # -------------------- Configurações Iniciais --------------------
 API_URL = "https://leilojus-api.tjdft.jus.br/public/leiloes"
@@ -58,6 +68,8 @@ def save_to_json(data, filename):
 
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
+        
+        
 
 def load_from_json(filename):
     """Carrega dados de arquivo JSON."""
@@ -65,6 +77,41 @@ def load_from_json(filename):
         with open(filename, 'r', encoding='utf-8') as f:
             return json.load(f)
     return {}
+
+def save_to_mongo(data):
+    
+    dados_gerais = {
+        "data_atualizacao": datetime.now(fuso_horario_brasil).strftime('%Y-%m-%d %H:%M:%S')
+    }
+    
+    dados_gerais_collection.update_one(
+        {"_id": "dados_gerais"}, 
+        {"$set": dados_gerais}, 
+        upsert=True
+    )
+    
+    # Salva os lotes na collection 'lotes'
+    for item in data:
+        lotes_collection.update_one(
+            {"id": item["id"]}, 
+            {"$set": item}, 
+            upsert=True
+        )
+        
+def load_from_mongo():
+    """Carrega dados das collections 'dados_gerais' e 'lotes' do MongoDB."""
+    
+    # Carrega os dados gerais da collection 'dados_gerais'
+    dados_gerais = dados_gerais_collection.find_one({"_id": "dados_gerais"})
+    
+    # Carrega os lotes da collection 'lotes'
+    lotes = list(lotes_collection.find())
+    
+    return {
+        "dados_gerais": dados_gerais if dados_gerais else {},
+        "lotes": lotes if lotes else []
+    }
+
 
 def format_date(date_str):
     """Formata datas no padrão dd/mm/yyyy hh:mm."""
@@ -159,7 +206,7 @@ def buscarDados():
     new_data = [leilao for leilao in all_leiloes if leilao['id'] not in existing_data_ids]
 
     # Verifica mudanças nos imóveis existentes
-    ignore_fields = ["data_atualizacao_api", "historico_alteracoes"] 
+    ignore_fields = ["_id","data_atualizacao_api", "historico_alteracoes"] 
     changes = check_for_changes(lotes, all_leiloes,ignore_fields)
     
     
@@ -173,7 +220,8 @@ def buscarDados():
     lotes.extend(new_data)
 
     # Salva os dados atualizados
-    save_to_json(lotes, JSON_FILE)
+    # save_to_json(lotes, JSON_FILE)
+    save_to_mongo(lotes)
 
     return new_data, changes
 
@@ -270,11 +318,13 @@ if not os.path.exists(JSON_FILE):
     if all_leiloes:
         all_leiloes = {"lotes": all_leiloes}  # Estrutura de lotes
         save_to_json(all_leiloes, JSON_FILE)
+        save_to_mongo(all_leiloes['lotes'])
         st.success(f"Dados iniciais carregados com {len(all_leiloes['lotes'])} registros.")
     else:
         st.warning("Nenhum dado inicial encontrado.")
 
-existing_data = load_from_json(JSON_FILE)
+# existing_data = load_from_json(JSON_FILE)
+existing_data = load_from_mongo()
 
 dados_gerais = existing_data['dados_gerais']
 lotes = existing_data['lotes']
