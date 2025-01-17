@@ -216,16 +216,22 @@ def buscarDados():
     
     # Atualiza apenas os leilões modificados
     for leilao in changes:
-        index_to_update = next((i for i, item in enumerate(lotes) if item['id'] == leilao['id']), None)
-        if index_to_update is not None:
-            lotes[index_to_update] = leilao  # Substitui o leilão modificado pela versão nova
+        print("atualizando item: ", leilao["id"])
+        lotes_collection.update_one(
+            {"id": leilao["id"]}, 
+            {"$set": leilao}, 
+            upsert=True
+        )
 
     # Atualiza a base de dados com novos e atualizados leilões
-    lotes.extend(new_data)
+    #adicionar os novos dados ao banco de dados
+    print(f"Adicionando {len(new_data)} novos leilões ao banco de dados...")
+    lotes_collection.insert_many(new_data)
+    # lotes.extend(new_data)
+    
 
-    # Salva os dados atualizados
-    # save_to_json(lotes, JSON_FILE)
-    save_to_mongo(lotes)
+
+    # save_to_mongo(lotes)
 
     return new_data, changes
 
