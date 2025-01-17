@@ -218,7 +218,8 @@ def buscarDados():
             upsert=True
         )
 
-    lotes_collection.insert_many(new_data)
+    if(new_data):
+        lotes_collection.insert_many(new_data)
 
     return new_data, changes
 
