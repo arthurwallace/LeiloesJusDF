@@ -157,6 +157,7 @@ def compare_dicts(dict1, dict2, ignore_fields=None):
 
 def check_for_changes(existing, new, ignore_fields=None):
     changes = []
+    unset_data = {}
     
     for existing_item in existing:
         matching_item = next((item for item in new if item['id'] == existing_item['id']), None)
@@ -168,22 +169,27 @@ def check_for_changes(existing, new, ignore_fields=None):
 
                 # Verifica se o existing_item já possui historico_alteracoes
                 if 'historico_alteracoes' in existing_item:
-                    # Copia o histórico de alterações do existing_item para o updated_item
                     updated_item['historico_alteracoes'] = existing_item['historico_alteracoes']
                 else:
-                    # Se não tiver histórico, inicializa com uma lista vazia
                     updated_item['historico_alteracoes'] = []
 
-                # Adiciona as mudanças no histórico (sem criar um novo nível)
+                # Adiciona as mudanças no histórico
                 updated_item['historico_alteracoes'].append({
                     'dataAlteracao': datetime.now(fuso_horario_brasil).isoformat(),
                     'alteracoes': item_changes
                 })
+
+                # Identifica os campos removidos
                 
+                for key in existing_item:
+                    if key not in matching_item and key not in ignore_fields:
+                        unset_data[key] = ""  # Marca o campo para remoção
+
                 # Adiciona o item atualizado ao resultado
                 changes.append(updated_item)
     
-    return changes
+    # Retorna tanto as alterações quanto os itens removidos
+    return changes, unset_data
 
 def buscarDados():
     st.info("Buscando novos leilões, por favor aguarde...")
@@ -207,16 +213,29 @@ def buscarDados():
 
     # Verifica mudanças nos imóveis existentes
     ignore_fields = ["_id","data_atualizacao_api", "historico_alteracoes"] 
-    changes = check_for_changes(lotes, all_leiloes,ignore_fields)
+    changes, unset_data  = check_for_changes(lotes, all_leiloes,ignore_fields)
     
     
     # Atualiza apenas os leilões modificados
     for leilao in changes:
-        lotes_collection.update_one(
-            {"id": leilao["id"]}, 
-            {"$set": leilao}, 
-            upsert=True
-        )
+        update_data = {}
+
+        for key, value in leilao.items():
+            update_data[key] = value  # Atualiza o campo normalmente
+
+        update_query = {}
+        if update_data:
+            update_query["$set"] = update_data
+        if unset_data:
+            update_query["$unset"] = unset_data  # Remove campos com None
+
+        if update_query:  # Garante que não será feita uma operação vazia
+
+            lotes_collection.update_one(
+                {"id": leilao["id"]}, 
+                update_query
+            )
+
 
     if(new_data):
         lotes_collection.insert_many(new_data)
@@ -270,6 +289,48 @@ def formatar_novos_imoveis_email(json_data):
         formatted_string += "\n" + ("=" * 40) + "\n\n"
 
     return formatted_string
+
+def formatar_alteracoes_imoveis_email(changes):
+    formatted_string = ""
+    
+    for imovel in changes:
+        formatted_string += (f"\nID do Leilão: {imovel.get('id')}\n"
+                             f"Tipo de Leilão: {imovel.get('tipoDeLeilao')}\n"
+                             f"Primeira Hasta: {imovel.get('primeiraHasta')}\n"
+                             f"Segunda Hasta: {imovel.get('segundaHasta')}\n"
+                             f"Status: {imovel.get('status')}\n"
+                             f"Justificativa (se houver): {imovel.get('justificativaCancelamentoSuspensao', 'N/A')}\n"
+                             f"Valor Total dos Bens: R$ {imovel.get('valorTotalBens', 0):,.2f}\n"
+                             f"----- ALTERAÇÕES -----\n")
+        
+        historico = imovel.get('historico_alteracoes', [])
+        
+        for alteracao in historico:
+            data_alteracao = alteracao.get("dataAlteracao", "N/A")
+            formatted_string += f"Data da Alteração: {data_alteracao}\n"
+                
+            alteracoes = alteracao.get("alteracoes", {})
+            
+            def extrair_valores(campo, valores, prefixo=""):
+                nonlocal formatted_string
+                if isinstance(valores, dict) and "old" in valores and "new" in valores:
+                    valor_antigo = valores.get("old", "N/A")
+                    valor_novo = valores.get("new", "N/A")
+                    formatted_string += f"{prefixo}{campo}: {valor_antigo} -> {valor_novo}\n"
+                else:
+                    for subcampo, subvalores in valores.items():
+                        extrair_valores(subcampo, subvalores, f"{prefixo}{campo}.")
+
+            for campo, valores in alteracoes.items():
+                extrair_valores(campo, valores)
+
+            formatted_string += "-----------------------\n"
+        
+        formatted_string += "\n" + ("=" * 40) + "\n\n"
+    
+    return formatted_string
+
+
 
 def send_email(subject, body):
     try:
@@ -450,8 +511,10 @@ if st.query_params.get("buscar") == "true":
     if(new_data or changes):
         alert_subject = 'Leilões Judiciais DF - Novos Imóveis Adicionados!'
         alert_body = f'Foram adicionados {len(new_data)} novos imóveis e {len(changes)} atualizados. Verifique a lista para mais detalhes:\n\n'
-        alert_body += '\n\n--- Novos Imóveis ---\n\n'
+        alert_body += '\n\n>>>>> Novos Imóveis <<<<<\n\n'
         alert_body += formatar_novos_imoveis_email(new_data)
+        alert_body += '\n\n>>>>> Alterações <<<<<\n\n'
+        alert_body += formatar_alteracoes_imoveis_email(changes)
         alert_body += '\n\nConfira em: https://leiloesjusdf.streamlit.app/\n\n'
         send_email(alert_subject, alert_body)
 
