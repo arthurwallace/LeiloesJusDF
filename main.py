@@ -213,8 +213,7 @@ def buscarDados():
 
     # Verifica mudanças nos imóveis existentes
     ignore_fields = ["_id","data_atualizacao_api", "historico_alteracoes"] 
-    changes, unset_data  = check_for_changes(lotes, all_leiloes,ignore_fields)
-    
+    changes, unset_data  = check_for_changes(lotes, all_leiloes, ignore_fields)
     
     # Atualiza apenas os leilões modificados
     for leilao in changes:
@@ -223,21 +222,23 @@ def buscarDados():
         for key, value in leilao.items():
             update_data[key] = value  # Atualiza o campo normalmente
 
+        # Remove do unset_data qualquer campo que esteja no update_data
+        unset_data_filtered = {key: "" for key in unset_data if key not in update_data}
+
         update_query = {}
         if update_data:
             update_query["$set"] = update_data
-        if unset_data:
-            update_query["$unset"] = unset_data  # Remove campos com None
+        if unset_data_filtered:
+            update_query["$unset"] = unset_data_filtered  # Remove campos com None
 
         if update_query:  # Garante que não será feita uma operação vazia
-
+            print(f"Atualizando {leilao['id']} com {update_query}")
             lotes_collection.update_one(
                 {"id": leilao["id"]}, 
                 update_query
             )
 
-
-    if(new_data):
+    if new_data:
         lotes_collection.insert_many(new_data)
         
     dados_gerais = {
@@ -251,6 +252,7 @@ def buscarDados():
     )
 
     return new_data, changes
+
 
 
 def formatar_novos_imoveis_email(json_data):
